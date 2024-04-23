@@ -87,7 +87,7 @@ const scrollPage = (targetElement) => {
 };
 
 const openResume = () => {
-  window.open("http://localhost:5173/resume/resume.pdf", "_blank");
+  window.open("https://portfolio-jeg1.onrender.com/resume/resume.pdf", "_blank");
 };
 </script>
 <style>
