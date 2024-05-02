@@ -132,12 +132,22 @@
           </div>
           <div class="project-actions d-flex gap-3">
             <button class="btn">
-              <i class="bi bi-eye-fill"></i>
-              See Live
+              <a
+                href="https://realtime-chat-app-client-r7p9.onrender.com"
+                target="_blank"
+              >
+                <i class="bi bi-eye-fill"></i>
+                See Live</a
+              >
             </button>
             <button class="btn">
-              <i class="bi bi-code-slash"></i>
-              Source Code
+              <a
+                href="https://github.com/AyouubElb/Realtime-Chat-App-client"
+                target="_blank"
+              >
+                <i class="bi bi-code-slash"></i>
+                Source Code
+              </a>
             </button>
           </div>
         </div>
@@ -472,13 +482,17 @@ const scrollPage = (targetElement) => {
   padding: 4px 8px;
 }
 .project-actions button {
-  color: #64dcdd;
   border: #64dcdd 2px solid;
   border-radius: 4px;
   transition: background-color 0.5s;
 }
+.project-actions button a {
+  color: #64dcdd;
+}
 .project-actions button:hover {
   background-color: #64dcdd;
+}
+.project-actions button a:hover {
   color: #fefdfb;
 }
 /* contact section */
