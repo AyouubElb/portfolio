@@ -7,13 +7,24 @@
       data-aos-easing="ease-in-out"
       data-aos-offset="50"
     >
-      <div class="home-header-text">
+      <div class="home-header-text d-flex flex-column">
         <h1>
           Hello,
           <span class="color-text">I'm </span>
           Ayoub a fullstack
           <span class="color-text">developer</span>
         </h1>
+        <div class="header-links d-flex mx-auto my-3">
+          <a href="https://github.com/AyouubElb" target="_blank"
+            ><i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ayoub-el-bouasri/"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
         <div
           class="scroll-down-arrow-component d-flex flex-column align-items-center"
         >
@@ -177,7 +188,17 @@
             <a
               href="https://www.linkedin.com/in/ayoub-el-bouasri/"
               class="my-auto"
+              target="_blank"
               >linkedin.com/in/ayoub-el-bouasri</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-github"></i>
+            <a
+              href="https://github.com/AyouubElb"
+              class="my-auto"
+              target="_blank"
+              >github.com/AyouubElb</a
             >
           </li>
           <li>
@@ -307,10 +328,17 @@ const scrollPage = (targetElement) => {
   }
 }
 .home-container .home-header {
-  padding: 64px;
+  padding: 54px 64px;
 }
 .home-header .home-header-text {
   width: 550px;
+}
+.home-header-text .header-links a {
+  font-size: 1.75rem;
+  color: #fefdfb;
+}
+.home-header-text .header-links a:first-of-type {
+  margin-right: 12px;
 }
 .home-header h1 {
   font-size: 4.5rem;

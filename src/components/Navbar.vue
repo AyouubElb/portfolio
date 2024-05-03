@@ -87,7 +87,10 @@ const scrollPage = (targetElement) => {
 };
 
 const openResume = () => {
-  window.open("https://portfolio-jeg1.onrender.com/resume/resume.pdf", "_blank");
+  window.open(
+    "https://portfolio-jeg1.onrender.com/resume/resume.pdf",
+    "_blank"
+  );
 };
 </script>
 <style>
