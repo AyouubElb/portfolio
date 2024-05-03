@@ -114,19 +114,24 @@
       </div>
     </div>
     <div class="projects-section-container">
-      <div
-        class="projects-section-title"
-        data-aos="fade-left"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-      >
+      <div class="projects-section-title">
         <h2>My projects</h2>
       </div>
       <div class="projects-section-content grid-2">
-        <div class="project-image">
+        <div
+          class="project-image"
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
           <img src="../assets/images/realtime-chat-app-screenshot.png" alt="" />
         </div>
-        <div class="project-text px-5 py-3">
+        <div
+          class="project-text px-5 py-3"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
           <h3 class="mb-4">Realtime Chat App</h3>
           <ul class="projects-tags-list d-flex gap-2 p-0">
             <li class="projects-tag-item">JavaScript</li>
@@ -165,7 +170,12 @@
       </div>
     </div>
     <div class="contact-section-container grid-2">
-      <div class="contact-section-text pe-3">
+      <div
+        class="contact-section-text pe-3"
+        data-aos="fade-right"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+      >
         <div
           class="contact-section-title"
           data-aos="fade-left"
@@ -207,7 +217,12 @@
           </li>
         </ul>
       </div>
-      <div class="contact-section-form pt-5">
+      <div
+        class="contact-section-form pt-5"
+        data-aos="fade-left"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+      >
         <form>
           <div class="form-group mb-3">
             <label for="name" class="form-label">Name</label>
