@@ -407,11 +407,11 @@ const scrollPage = (targetElement) => {
 .header-icon i {
   position: absolute;
   color: #7a878d;
-  font-size: 3rem;
+  font-size: 3.5rem;
   -webkit-text-stroke: 0.4px;
 }
 .home-header .header-icon:first-of-type {
-  left: 10%;
+  left: 15%;
   top: 25%;
 }
 .home-header .header-icon:nth-of-type(2) {
@@ -419,7 +419,7 @@ const scrollPage = (targetElement) => {
 }
 .home-header .header-icon:nth-of-type(3) {
   right: 45%;
-  bottom: 47%;
+  top: 45%;
 }
 .home-header .header-icon:nth-of-type(4) {
   right: 30%;
