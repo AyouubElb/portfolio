@@ -7,18 +7,6 @@
       data-aos-easing="ease-in-out"
       data-aos-offset="50"
     >
-          <div class="header-icon">
-        <i class="bi bi-database-fill"></i>
-      </div>
-      <div class="header-icon">
-        <i class="bi bi-globe"></i>
-      </div>
-      <div class="header-icon">
-        <i class="bi bi-code-slash"></i>
-      </div>
-      <div class="header-icon">
-        <i class="bi bi-braces"></i>
-      </div>
       <div class="home-header-text d-flex flex-column">
         <h1>
           Hello,
