@@ -51,7 +51,7 @@
         <img src="../assets/images/profile-image.jpg" alt="" />
       </div>
       <div class="about-text mx-auto">
-        Hi There I'm Ayoub EL Bouasri. A Full Stack Web Developer with 2+ years
+        Hi There I'm Ayoub EL Bouasri. A Full Stack Web Developer with 1+ years
         of professional experience in web development. Passionate and quick
         learner with a strong focus on staying updated with new skills and
         technologies in software engineering. My expertise lies in translating
