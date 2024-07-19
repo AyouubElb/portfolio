@@ -48,7 +48,7 @@
         <h2>About me.</h2>
       </div>
       <div class="about-img mx-auto">
-        <img src="../assets/images/profile-image.jpg" alt="" />
+        <img src="../assets/images/profile-image.png" alt="" />
       </div>
       <div class="about-text mx-auto">
         Hi There I'm Ayoub EL Bouasri. A Full Stack Web Developer with 1+ years
@@ -388,7 +388,7 @@ const scrollPage = (targetElement) => {
 .home-container .home-header {
   padding: 54px 64px;
 }
-  .header-icon {
+.header-icon {
   position: absolute;
   z-index: -1;
 }
