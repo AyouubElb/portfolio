@@ -83,8 +83,16 @@
             <span>Bootstrap</span>
           </div>
           <div class="skill-item d-flex flex-column">
+            <img src="../assets/icons/tailwind-svgrepo-com.svg" />
+            <span>Tailwind</span>
+          </div>
+          <div class="skill-item d-flex flex-column">
             <img src="../assets/icons/vue-svgrepo-com.svg" />
             <span>Vue</span>
+          </div>
+          <div class="skill-item d-flex flex-column">
+            <img src="../assets/icons/react-svgrepo-com.svg" />
+            <span>React</span>
           </div>
           <div class="skill-item d-flex flex-column">
             <img src="../assets/icons/vite.svg" />
@@ -566,8 +574,8 @@ const scrollPage = (targetElement) => {
   flex-wrap: wrap;
 }
 .skill-item {
-  min-width: 140px;
-  padding: 45px 0px;
+  min-width: 125px;
+  padding: 35px 0px;
   border: #565656 2px solid;
   border-radius: 75px;
   gap: 8px;
