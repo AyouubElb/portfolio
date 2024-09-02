@@ -202,14 +202,14 @@
           </ul>
           <div class="project-actions d-flex gap-3">
             <button class="btn">
-              <a href="https://blackshop.onrender.com" target="_blank">
+              <a href="https://blackshop-store-client.onrender.com" target="_blank">
                 <i class="bi bi-eye-fill"></i>
                 See Live
               </a>
             </button>
             <button class="btn">
               <a
-                href="https://github.com/AyouubElb/Blackshop-Store-client"
+                href="https://github.com/AyouubElb/Blackshop"
                 target="_blank"
               >
                 <i class="bi bi-code-slash"></i>
