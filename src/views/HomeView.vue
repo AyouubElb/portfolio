@@ -125,7 +125,7 @@
       <div class="projects-section-title">
         <h2>My projects</h2>
       </div>
-      <div class="projects-section-content grid-2">
+      <div class="projects-section-content grid-2 mb-5">
         <div
           class="project-image"
           data-aos="fade-right"
@@ -168,7 +168,7 @@
           </div>
         </div>
       </div>
-      <div class="projects-section-content grid-2">
+      <div class="projects-section-content grid-2 mb-5">
         <div
           class="project-image"
           data-aos="fade-right"
