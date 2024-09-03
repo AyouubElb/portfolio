@@ -125,6 +125,92 @@
       <div class="projects-section-title">
         <h2>My projects</h2>
       </div>
+      <div class="projects-section-content grid-2">
+        <div
+          class="project-image"
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
+          <img src="../assets/images/blog-app-screenshot.png" alt="" />
+        </div>
+        <div
+          class="project-text px-5 py-3"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="mb-4">Blog App</h3>
+          <ul class="projects-tags-list d-flex gap-2 p-0">
+            <li class="projects-tag-item">TypeScript</li>
+            <li class="projects-tag-item">React</li>
+            <li class="projects-tag-item">Vite</li>
+            <li class="projects-tag-item">Tailwind</li>
+            <li class="projects-tag-item">Node/Express</li>
+            <li class="projects-tag-item">Mysql</li>
+          </ul>
+          <div class="project-actions d-flex gap-3">
+            <button class="btn">
+              <a
+                href="https://blog-app-client-zytp.onrender.com/"
+                target="_blank"
+              >
+                <i class="bi bi-eye-fill"></i>
+                See Live
+              </a>
+            </button>
+            <button class="btn">
+              <a href="https://github.com/AyouubElb/blog-app" target="_blank">
+                <i class="bi bi-code-slash"></i>
+                Source Code
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="projects-section-content grid-2">
+        <div
+          class="project-image"
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
+          <img src="../assets/images/blackshop-screenshot.png" alt="" />
+        </div>
+        <div
+          class="project-text px-5 py-3"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
+          <h3 class="mb-4">E-commerce Website: Clothes Store</h3>
+          <ul class="projects-tags-list d-flex gap-2 p-0">
+            <li class="projects-tag-item">JavaScript</li>
+            <li class="projects-tag-item">Vue</li>
+            <li class="projects-tag-item">Pinia</li>
+            <li class="projects-tag-item">Bootstrap</li>
+            <li class="projects-tag-item">Node/Express</li>
+            <li class="projects-tag-item">MongoDB</li>
+          </ul>
+          <div class="project-actions d-flex gap-3">
+            <button class="btn">
+              <a
+                href="https://blackshop-store-client.onrender.com"
+                target="_blank"
+              >
+                <i class="bi bi-eye-fill"></i>
+                See Live
+              </a>
+            </button>
+            <button class="btn">
+              <a href="https://github.com/AyouubElb/Blackshop" target="_blank">
+                <i class="bi bi-code-slash"></i>
+                Source Code
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="projects-section-content grid-2" style="margin-bottom: 62px">
         <div
           class="project-image"
@@ -167,49 +253,6 @@
             <button class="btn">
               <a
                 href="https://github.com/AyouubElb/Realtime-Chat-App-client"
-                target="_blank"
-              >
-                <i class="bi bi-code-slash"></i>
-                Source Code
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="projects-section-content grid-2">
-        <div
-          class="project-image"
-          data-aos="fade-right"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-        >
-          <img src="../assets/images/blackshop-screenshot.png" alt="" />
-        </div>
-        <div
-          class="project-text px-5 py-3"
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-        >
-          <h3 class="mb-4">E-commerce Website: Clothes Store</h3>
-          <ul class="projects-tags-list d-flex gap-2 p-0">
-            <li class="projects-tag-item">JavaScript</li>
-            <li class="projects-tag-item">Vue</li>
-            <li class="projects-tag-item">Pinia</li>
-            <li class="projects-tag-item">Bootstrap</li>
-            <li class="projects-tag-item">Node/Express</li>
-            <li class="projects-tag-item">MongoDB</li>
-          </ul>
-          <div class="project-actions d-flex gap-3">
-            <button class="btn">
-              <a href="https://blackshop-store-client.onrender.com" target="_blank">
-                <i class="bi bi-eye-fill"></i>
-                See Live
-              </a>
-            </button>
-            <button class="btn">
-              <a
-                href="https://github.com/AyouubElb/Blackshop"
                 target="_blank"
               >
                 <i class="bi bi-code-slash"></i>
