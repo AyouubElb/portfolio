@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-roboto-mono), monospace;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.code-font {
+  font-family: var(--font-source-code-pro), monospace;
+}
+
+/* Animation classes */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Typing animation */
+.typing-effect {
+  overflow: hidden;
+  border-right: 3px solid #a3e635;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #a3e635;
+  }
+}
+
+/* Particle animation */
+.matrix-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(163, 230, 53, 0.3);
+  animation: float 15s infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-30px) translateX(30px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-20px);
+  }
+  75% {
+    transform: translateY(30px) translateX(10px);
+  }
+}
+
+/* Skill card animation */
+.skill-card:hover .skill-icon-container {
+  opacity: 1;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Notification animation */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.notification {
+  animation: slideInDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Journey timeline animation */
+.journey-item {
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.journey-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.journey-item-left {
+  transform: translateX(-30px);
+}
+
+.journey-item-right {
+  transform: translateX(30px);
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* View details arrow animation */
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.view-details:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Matrix Digital Rain Animation */
+.matrix-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  width: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  animation: matrixRain linear infinite;
+}
+
+.matrix-character {
+  color: #a3e635;
+  font-family: var(--font-source-code-pro), monospace;
+  font-size: 14px;
+  line-height: 1;
+  text-shadow: 0 0 5px rgba(163, 230, 53, 0.7);
+  animation: matrixFade linear infinite;
+}
+
+@keyframes matrixRain {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes matrixFade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--opacity, 0.5);
+  }
+  80% {
+    opacity: var(--opacity, 0.5);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Text shadow for better readability over the matrix background */
+.text-shadow-sm {
+  text-shadow: 0 0 10px rgba(5, 46, 22, 0.8), 0 0 20px rgba(5, 46, 22, 0.6);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 0 15px rgba(5, 46, 22, 0.9), 0 0 30px rgba(5, 46, 22, 0.7);
+}
+
+.subtle-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(163, 230, 53, 0.2);
+  animation: particleFloat 20s infinite;
+}
+
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -50px);
+  }
+  50% {
+    transform: translate(100px, 0);
+  }
+  75% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@media (max-width: 640px) {
+  button,
+  a {
+    min-height: 44px;
+  }
+}
