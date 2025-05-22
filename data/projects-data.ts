@@ -49,4 +49,16 @@ export const projects: Project[] = [
     link: "https://prismpost-blog.vercel.app/",
     github: "https://github.com/AyouubElb/prismpost-blog",
   },
+  {
+    id: 5,
+    title: "Finance Dashboard",
+    description:
+      "A modern, responsive dashboard application built with Next.js, React, TypeScript, and Tailwind CSS. This project showcases financial data visualization and analytics.",
+    image:
+      "/finance-dashboard.PNG",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    categories: ["Web", "Analytics", "Finance"],
+    link: "https://finance-dashboard-one-amber.vercel.app/",
+    github: "https://github.com/AyouubElb/finance-dashboard.git",
+  },
 ]
