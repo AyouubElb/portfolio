@@ -29,21 +29,20 @@ const About = forwardRef<HTMLDivElement, AboutProps>(({ profileImage }, ref) => 
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Hello, I'm <span className="text-lime-400">Ayoub EL Bouasri</span>
             </h1>
-            <h2 className="text-2xl text-gray-300 mb-8">Full Stack Developer</h2>
+            <h2 className="text-2xl text-gray-300 mb-8">Full Stack TypeScript Engineer</h2>
             <p className="text-lg mb-6 text-gray-300 leading-relaxed">
-              Full-Stack Software Developer with 2+ years of professional experience in building scalable,
-              production-grade web applications. Specialized in front-end development using Next.js (React-based),
-              Vue.js, and Tailwind CSS, and back-end systems with Node.js and Express.
+              Full-stack developer building production web apps end-to-end. Currently developing a healthcare SaaS
+              platform at MedicallyPlus and training AI models at Scale AI. Specialized in TypeScript across the
+              stack — Next.js, Express, PostgreSQL, and modern React patterns.
             </p>
             <p className="text-lg mb-10 text-gray-300 leading-relaxed">
-              Experienced in REST API design, database integration (MongoDB, MySQL), and optimizing UI/UX performance.
-              Strong knowledge of software design patterns, testing, and AI model training. Adept at delivering
-              high-quality code in remote and agile teams.
+              Experienced in REST API design, role-based access control, queue systems (BullMQ), and database
+              design with Prisma ORM. Background in AI/LLM evaluation and prompt engineering.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 text-gray-300">
               <div className="flex items-center">
                 <MapPin size={20} className="mr-2 text-lime-400" />
-                <span>Istanbul, Turkey</span>
+                <span>Rabat, Morocco</span>
               </div>
               <div className="flex items-center">
                 <Mail size={20} className="mr-2 text-lime-400" />

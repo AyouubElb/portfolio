@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { forwardRef } from "react"
-import { Loader2 } from "lucide-react"
+import { Loader2, Mail, Linkedin, Github } from "lucide-react"
 
 interface ContactProps {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
@@ -19,6 +19,34 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
             Let's Connect
           </div>
           <h2 className="text-4xl font-bold text-white">Get In Touch</h2>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <a
+            href="mailto:ayoub.elbouuasri@gmail.com"
+            className="flex items-center gap-2 text-gray-300 hover:text-lime-400 transition-colors"
+          >
+            <Mail size={20} className="text-lime-400" />
+            ayoub.elbouuasri@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ayoub-el-bouasri/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-gray-300 hover:text-lime-400 transition-colors"
+          >
+            <Linkedin size={20} className="text-lime-400" />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/AyouubElb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-gray-300 hover:text-lime-400 transition-colors"
+          >
+            <Github size={20} className="text-lime-400" />
+            GitHub
+          </a>
         </div>
 
         <div className="bg-green-950 p-5 sm:p-8 rounded-lg shadow-xl border border-lime-400/20">

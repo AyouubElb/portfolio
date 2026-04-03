@@ -31,6 +31,6 @@ export interface Project {
   image: string
   technologies: string[]
   categories?: string[]
-  link: string
-  github: string
+  link?: string
+  github?: string
 }

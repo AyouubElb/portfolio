@@ -40,13 +40,17 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>(
     // Map category names to icons
     const getCategoryIcon = (category: string) => {
       switch (category) {
-        case "Programming Languages":
+        case "Languages":
           return <Code className="w-5 h-5" />
-        case "Frameworks/Libraries":
+        case "Frontend":
           return <Blocks className="w-5 h-5" />
-        case "Backend & Databases":
+        case "Backend":
+          return <Server className="w-5 h-5" />
+        case "Databases":
           return <Database className="w-5 h-5" />
-        case "Dev Tools & AI":
+        case "AI/ML":
+          return <BrainCircuit className="w-5 h-5" />
+        case "Tools":
           return <Wrench className="w-5 h-5" />
         default:
           return <Server className="w-5 h-5" />
@@ -56,34 +60,46 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>(
     // Map skill names to appropriate icons
     const getSkillIcon = (skillName: string) => {
       const iconMap: Record<string, JSX.Element> = {
-        // Programming Languages
+        // Languages
         JavaScript: <Braces className="w-6 h-6" />,
         TypeScript: <FileJson className="w-6 h-6" />,
         Python: <Cpu className="w-6 h-6" />,
         SQL: <Database className="w-6 h-6" />,
-        HTML5: <Globe className="w-6 h-6" />,
-        CSS3: <Palette className="w-6 h-6" />,
 
-        // Frameworks/Libraries
+        // Frontend
         "Next.js": <Zap className="w-6 h-6" />,
         React: <Atom className="w-6 h-6" />,
-        "Vue.js": <Layers className="w-6 h-6" />,
         "Tailwind CSS": <Palette className="w-6 h-6" />,
-        "Express.js": <Server className="w-6 h-6" />,
+        "React Query": <Workflow className="w-6 h-6" />,
+        Zustand: <Boxes className="w-6 h-6" />,
+        "React Hook Form": <Puzzle className="w-6 h-6" />,
+        GSAP: <Sparkles className="w-6 h-6" />,
 
-        // Backend & Databases
+        // Backend
         "Node.js": <Webhook className="w-6 h-6" />,
+        "Express.js": <Server className="w-6 h-6" />,
+        "REST API Design": <Puzzle className="w-6 h-6" />,
+        "JWT Auth": <Layers className="w-6 h-6" />,
+        BullMQ: <Workflow className="w-6 h-6" />,
+        Zod: <FileJson className="w-6 h-6" />,
+
+        // Databases
+        PostgreSQL: <Database className="w-6 h-6" />,
+        Prisma: <Layers className="w-6 h-6" />,
         MongoDB: <Boxes className="w-6 h-6" />,
         MySQL: <Database className="w-6 h-6" />,
-        "REST APIs": <Puzzle className="w-6 h-6" />,
+        Supabase: <Globe className="w-6 h-6" />,
 
-        // Dev Tools & AI
-        Git: <GitBranch className="w-6 h-6" />,
-        Agile: <Workflow className="w-6 h-6" />,
-        Testing: <Gauge className="w-6 h-6" />,
-        Debugging: <Terminal className="w-6 h-6" />,
-        "AI Model Training": <BrainCircuit className="w-6 h-6" />,
+        // AI/ML
+        "LLM Evaluation": <BrainCircuit className="w-6 h-6" />,
         "Prompt Engineering": <Bot className="w-6 h-6" />,
+        "Gemini/OpenAI APIs": <Sparkles className="w-6 h-6" />,
+
+        // Tools
+        Git: <GitBranch className="w-6 h-6" />,
+        Vercel: <Globe className="w-6 h-6" />,
+        "CI/CD": <Workflow className="w-6 h-6" />,
+        Agile: <Gauge className="w-6 h-6" />,
       }
 
       return iconMap[skillName] || <Sparkles className="w-6 h-6" />
@@ -140,8 +156,8 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>(
 
           <div className="mt-12 text-center">
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              With over 2 years of professional experience, I've developed expertise in these technologies, allowing me
-              to build scalable, production-grade web applications and deliver high-quality code.
+              Building production web apps end-to-end with TypeScript across the full stack — from healthcare SaaS
+              platforms to real-time dashboards and AI-powered tools.
             </p>
           </div>
         </div>

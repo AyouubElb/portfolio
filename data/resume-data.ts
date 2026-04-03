@@ -2,23 +2,31 @@ import type { Experience, Education, SkillGroup } from "@/types"
 
 export const experiences: Experience[] = [
   {
-    title: "Next.js Fullstack Developer",
+    title: "Full Stack Developer",
+    company: "MedicallyPlus",
+    logo: "https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    period: "2025 - Present",
+    description:
+      "Building a full-stack healthcare SaaS platform for medical tourism. Developing 3 role-based dashboards (patient, provider, admin), REST API with Zod validation, BullMQ email queue system, JWT auth with role-based middleware, and admin bento grid dashboard with consultation pipeline and audit logs.",
+  },
+  {
+    title: "Full Stack Developer",
     company: "Safari GPS",
     logo: "https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    period: "12/2024 - Present",
+    period: "12/2024 - 11/2025",
     description:
-      "Developed and maintained scalable web applications with Next.js. Built responsive UIs with Tailwind CSS, and optimized performance for seamless user experiences. Implemented and optimized REST APIs and ensured seamless integration between frontend and backend.",
+      "Developed a villa rental platform with search, filtering, availability management, and Stripe payments. Built a real-time fleet tracking dashboard with custom client dashboards. Implemented REST APIs and ensured seamless frontend-backend integration.",
   },
   {
-    title: "Freelance - AI Training",
-    company: "Outlier.ai",
+    title: "AI Training Engineer",
+    company: "Outlier.ai / Scale AI",
     logo: "https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    period: "08/2024 - Present",
+    period: "08/2024 - 02/2026",
     description:
-      "Specialized in training language models for coding tasks using prompt engineering techniques and coding expertise including SQL, Python, and JavaScript/Typescript. Evaluate and rate AI-generated code and provided clear summaries or justifications.",
+      "Trained and evaluated language models for coding tasks using prompt engineering techniques. Evaluated AI-generated code in Python, JavaScript/TypeScript, and SQL. Provided structured feedback and justifications for model improvement.",
   },
   {
-    title: "Junior Front-End Developer",
+    title: "Front-End Developer (Erasmus)",
     company: "Parkyeri",
     logo: "https://plus.unsplash.com/premium_photo-1706727287722-3ec90762d883?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     period: "02/2023 - 09/2023",
@@ -53,45 +61,62 @@ export const education: Education[] = [
 
 export const skills: SkillGroup[] = [
   {
-    category: "Programming Languages",
+    category: "Languages",
     items: [
+      { name: "TypeScript", level: 95 },
       { name: "JavaScript", level: 95 },
-      { name: "TypeScript", level: 90 },
       { name: "Python", level: 85 },
-      { name: "SQL", level: 80 },
-      { name: "HTML5", level: 95 },
-      { name: "CSS3", level: 90 },
+      { name: "SQL", level: 85 },
     ],
   },
   {
-    category: "Frameworks/Libraries",
+    category: "Frontend",
     items: [
-      { name: "Next.js", level: 92 },
-      { name: "React", level: 90 },
-      { name: "Vue.js", level: 85 },
+      { name: "React", level: 95 },
+      { name: "Next.js", level: 95 },
       { name: "Tailwind CSS", level: 95 },
-      { name: "Express.js", level: 85 },
+      { name: "React Query", level: 90 },
+      { name: "Zustand", level: 88 },
+      { name: "React Hook Form", level: 88 },
+      { name: "GSAP", level: 80 },
     ],
   },
   {
-    category: "Backend & Databases",
+    category: "Backend",
     items: [
-      { name: "Node.js", level: 88 },
-      { name: "Express.js", level: 85 },
+      { name: "Node.js", level: 90 },
+      { name: "Express.js", level: 90 },
+      { name: "REST API Design", level: 92 },
+      { name: "JWT Auth", level: 88 },
+      { name: "BullMQ", level: 85 },
+      { name: "Zod", level: 90 },
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "PostgreSQL", level: 88 },
+      { name: "Prisma", level: 90 },
       { name: "MongoDB", level: 80 },
-      { name: "MySQL", level: 75 },
-      { name: "REST APIs", level: 90 },
+      { name: "MySQL", level: 80 },
+      { name: "Supabase", level: 78 },
     ],
   },
   {
-    category: "Dev Tools & AI",
+    category: "AI/ML",
     items: [
-      { name: "Git", level: 90 },
+      { name: "LLM Evaluation", level: 88 },
+      { name: "Prompt Engineering", level: 90 },
+      { name: "Gemini/OpenAI APIs", level: 82 },
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      { name: "Git", level: 92 },
+      { name: "Vercel", level: 88 },
+      { name: "CI/CD", level: 82 },
       { name: "Agile", level: 85 },
-      { name: "Testing", level: 80 },
-      { name: "Debugging", level: 85 },
-      { name: "AI Model Training", level: 80 },
-      { name: "Prompt Engineering", level: 85 },
     ],
   },
 ]

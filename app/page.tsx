@@ -26,7 +26,7 @@ export default function Portfolio() {
   const [visibleExperiences, setVisibleExperiences] = useState<number[]>([]);
   const [visibleEducation, setVisibleEducation] = useState<number[]>([]);
   const [activeSkillCategory, setActiveSkillCategory] = useState(
-    "Programming Languages"
+    "Languages"
   );
 
   const heroRef = useRef<HTMLDivElement>(null);

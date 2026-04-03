@@ -173,26 +173,36 @@ const Projects = forwardRef<HTMLDivElement, ProjectsProps>(
                           </div>
                         </div>
 
-                        <div className="flex gap-4">
-                          <a
-                            href={projects.find(p => p.id === activeProject)?.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center px-5 py-3 bg-lime-400 text-green-950 rounded-md hover:bg-lime-500 transition-colors font-medium"
-                          >
-                            <ExternalLink size={16} className="mr-2" />
-                            Visit Website
-                          </a>
-                          <a
-                            href={projects.find(p => p.id === activeProject)?.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center px-5 py-3 border border-lime-400 text-lime-400 rounded-md hover:bg-lime-400/10 transition-colors"
-                          >
-                            <Github size={16} className="mr-2" />
-                            View Code
-                          </a>
-                        </div>
+                        {(projects.find(p => p.id === activeProject)?.link || projects.find(p => p.id === activeProject)?.github) ? (
+                          <div className="flex gap-4">
+                            {projects.find(p => p.id === activeProject)?.link && (
+                              <a
+                                href={projects.find(p => p.id === activeProject)?.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-5 py-3 bg-lime-400 text-green-950 rounded-md hover:bg-lime-500 transition-colors font-medium"
+                              >
+                                <ExternalLink size={16} className="mr-2" />
+                                Visit Website
+                              </a>
+                            )}
+                            {projects.find(p => p.id === activeProject)?.github && (
+                              <a
+                                href={projects.find(p => p.id === activeProject)?.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-5 py-3 border border-lime-400 text-lime-400 rounded-md hover:bg-lime-400/10 transition-colors"
+                              >
+                                <Github size={16} className="mr-2" />
+                                View Code
+                              </a>
+                            )}
+                          </div>
+                        ) : (
+                          <p className="text-gray-400 text-sm italic">
+                            Client project — code and demo not publicly available
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
