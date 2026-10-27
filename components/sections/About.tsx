@@ -32,8 +32,8 @@ const About = forwardRef<HTMLDivElement, AboutProps>(({ profileImage }, ref) => 
             <h2 className="text-2xl text-gray-300 mb-8">Full Stack TypeScript Engineer</h2>
             <p className="text-lg mb-6 text-gray-300 leading-relaxed">
               Full-stack developer building production web apps end-to-end. Currently developing a healthcare SaaS
-              platform at MedicallyPlus and training AI models at Scale AI. Specialized in TypeScript across the
-              stack — Next.js, Express, PostgreSQL, and modern React patterns.
+              platform at MedicallyPlus, after evaluating AI-generated code for Scale AI. Specialized in TypeScript
+              across the stack: Next.js, Express, PostgreSQL, and modern React patterns.
             </p>
             <p className="text-lg mb-10 text-gray-300 leading-relaxed">
               Experienced in REST API design, role-based access control, queue systems (BullMQ), and database

@@ -156,7 +156,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>(
 
           <div className="mt-12 text-center">
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Building production web apps end-to-end with TypeScript across the full stack — from healthcare SaaS
+              Building production web apps end-to-end with TypeScript across the full stack, from healthcare SaaS
               platforms to real-time dashboards and AI-powered tools.
             </p>
           </div>

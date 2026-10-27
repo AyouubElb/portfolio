@@ -26,7 +26,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Safari GPS — Villa Rental Platform",
+    title: "Safari GPS: Villa Rental Platform",
     description:
       "Full-stack Airbnb-style villa rental platform with search, filtering, availability management, and Stripe payment integration. Built as a client project at Safari GPS.",
     image: "/safari-villa.png",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Safari GPS — Fleet Tracking Dashboard",
+    title: "Safari GPS: Fleet Tracking Dashboard",
     description:
       "Real-time fleet tracking dashboard with custom client dashboards and live data visualization. Built as a client project at Safari GPS.",
     image: "/safari-fleet.png",

@@ -8,10 +8,12 @@ import { ChevronDown } from "lucide-react";
 interface HeroProps {
   scrollToSection: (ref: React.RefObject<HTMLDivElement>) => void;
   aboutRef: React.RefObject<HTMLDivElement>;
+  projectsRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
 }
 
 const Hero = forwardRef<HTMLDivElement, HeroProps>(
-  ({ scrollToSection, aboutRef }, ref) => {
+  ({ scrollToSection, aboutRef, projectsRef, contactRef }, ref) => {
     const [matrixColumns, setMatrixColumns] = useState<number[]>([]);
 
     useEffect(() => {
@@ -91,17 +93,17 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
           <p className="text-base md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-shadow-sm">
             I build healthcare platforms, real-time dashboards,
             <br className="hidden md:block" />
-            and AI-powered tools — from database to deployment.
+            and AI-powered tools, from database to deployment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <button
-              onClick={() => scrollToSection(aboutRef)}
+              onClick={() => scrollToSection(projectsRef)}
               className="px-8 py-4 rounded-md bg-lime-400 text-green-950 hover:bg-lime-500 transition-colors font-bold text-lg shadow-lg shadow-lime-400/20"
             >
               View My Work
             </button>
             <button
-              onClick={() => scrollToSection(aboutRef)}
+              onClick={() => scrollToSection(contactRef)}
               className="px-8 py-4 rounded-md border-2 border-lime-400 text-lime-400 hover:bg-lime-400/10 transition-colors font-bold text-lg backdrop-blur-sm"
             >
               Contact Me

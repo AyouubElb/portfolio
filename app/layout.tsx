@@ -4,8 +4,9 @@ import type { Metadata } from "next"
 import { Inter, Roboto_Mono, Source_Code_Pro } from "next/font/google"
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Full Stack Developer Portfolio",
+  title: "Ayoub El Bouasri | Full-Stack Software Engineer",
+  description:
+    "Full-stack software engineer in Rabat, Morocco, building web apps with React, Next.js, Node.js and PostgreSQL.",
 }
 
 // Load fonts

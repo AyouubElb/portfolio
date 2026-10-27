@@ -200,7 +200,7 @@ const Projects = forwardRef<HTMLDivElement, ProjectsProps>(
                           </div>
                         ) : (
                           <p className="text-gray-400 text-sm italic">
-                            Client project — code and demo not publicly available
+                            Client project: code and demo not publicly available
                           </p>
                         )}
                       </div>

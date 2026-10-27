@@ -142,6 +142,8 @@ export default function Portfolio() {
           ref={heroRef}
           scrollToSection={scrollToSection}
           aboutRef={aboutRef}
+          projectsRef={projectsRef}
+          contactRef={contactRef}
         />
 
         <About
