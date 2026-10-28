@@ -16,6 +16,7 @@ import { Check, AlertCircle } from "lucide-react";
 import { experiences, education, skills } from "@/data/resume-data";
 import { projects } from "@/data/projects-data";
 import { sendContactMessage } from "@/actions/contact";
+import type { ContactInput } from "@/lib/schemas/contact.schema";
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -24,7 +25,6 @@ export default function Portfolio() {
     type: "success" | "error";
     text: string;
   } | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [journeyProgress, setJourneyProgress] = useState(0);
   const [visibleExperiences, setVisibleExperiences] = useState<number[]>([]);
@@ -103,16 +103,11 @@ export default function Portfolio() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    setIsSubmitting(true);
-
+  // Returns true when sent so the form knows to clear itself
+  const handleSend = async (data: ContactInput): Promise<boolean> => {
     let result: Awaited<ReturnType<typeof sendContactMessage>>;
     try {
-      result = await sendContactMessage(
-        Object.fromEntries(new FormData(form))
-      );
+      result = await sendContactMessage(data);
     } catch {
       result = {
         ok: false,
@@ -120,20 +115,18 @@ export default function Portfolio() {
           "Your message could not be sent. Please email me directly at ayoub.elbouuasri@gmail.com.",
       };
     }
-    setIsSubmitting(false);
 
     if (result.ok) {
       setFormStatus({
         type: "success",
         text: "Message sent! I'll get back to you soon.",
       });
-      form.reset();
       setTimeout(() => setFormStatus(null), 5000);
     } else {
-      // Keep what the visitor typed so they can retry or copy it
       setFormStatus({ type: "error", text: result.error });
       setTimeout(() => setFormStatus(null), 10000);
     }
+    return result.ok;
   };
 
   return (
@@ -208,8 +201,7 @@ export default function Portfolio() {
 
         <Contact
           ref={contactRef}
-          handleSubmit={handleSubmit}
-          isSubmitting={isSubmitting}
+          onSend={handleSend}
         />
       </main>
 

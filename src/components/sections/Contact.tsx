@@ -1,16 +1,45 @@
 "use client"
 
-import type React from "react"
-
 import { forwardRef } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2, Mail, Linkedin, Github } from "lucide-react"
+import { contactSchema, type ContactInput } from "@/lib/schemas/contact.schema"
 
 interface ContactProps {
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
-  isSubmitting: boolean
+  onSend: (data: ContactInput) => Promise<boolean>
 }
 
-const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubmitting }, ref) => {
+const fieldClass = (hasError: boolean) =>
+  `w-full px-4 py-3 bg-green-900 border rounded-md focus:ring-2 focus:border-transparent text-white ${
+    hasError ? "border-red-400 focus:ring-red-400" : "border-lime-400/30 focus:ring-lime-400"
+  }`
+
+function FieldError({ id, message }: { id: string; message?: string }) {
+  if (!message) return null
+  return (
+    <p id={id} className="mt-2 text-sm text-red-300">
+      {message}
+    </p>
+  )
+}
+
+const Contact = forwardRef<HTMLDivElement, ContactProps>(({ onSend }, ref) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactInput>({
+    resolver: zodResolver(contactSchema),
+    mode: "onTouched",
+    defaultValues: { name: "", email: "", subject: "", message: "", hp_field: "" },
+  })
+
+  const onSubmit = async (data: ContactInput) => {
+    if (await onSend(data)) reset()
+  }
+
   return (
     <section ref={ref} className="py-24 bg-green-950">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,15 +79,15 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
         </div>
 
         <div className="bg-green-950 p-5 sm:p-8 rounded-lg shadow-xl border border-lime-400/20">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div style={{ display: "none" }} aria-hidden="true">
               <input
                 type="text"
-                name="hp_field"
                 tabIndex={-1}
                 autoComplete="off"
                 data-1p-ignore
                 data-lpignore="true"
+                {...register("hp_field")}
               />
             </div>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -69,10 +98,12 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
                 <input
                   type="text"
                   id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 bg-green-900 border border-lime-400/30 rounded-md focus:ring-2 focus:ring-lime-400 focus:border-transparent text-white"
+                  aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "name-error" : undefined}
+                  className={fieldClass(!!errors.name)}
+                  {...register("name")}
                 />
+                <FieldError id="name-error" message={errors.name?.message} />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -81,10 +112,12 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
                 <input
                   type="email"
                   id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 bg-green-900 border border-lime-400/30 rounded-md focus:ring-2 focus:ring-lime-400 focus:border-transparent text-white"
+                  aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "email-error" : undefined}
+                  className={fieldClass(!!errors.email)}
+                  {...register("email")}
                 />
+                <FieldError id="email-error" message={errors.email?.message} />
               </div>
             </div>
 
@@ -95,10 +128,12 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
               <input
                 type="text"
                 id="subject"
-                name="subject"
-                required
-                className="w-full px-4 py-3 bg-green-900 border border-lime-400/30 rounded-md focus:ring-2 focus:ring-lime-400 focus:border-transparent text-white"
+                aria-invalid={!!errors.subject}
+                aria-describedby={errors.subject ? "subject-error" : undefined}
+                className={fieldClass(!!errors.subject)}
+                {...register("subject")}
               />
+              <FieldError id="subject-error" message={errors.subject?.message} />
             </div>
 
             <div className="mb-8">
@@ -107,11 +142,13 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
               </label>
               <textarea
                 id="message"
-                name="message"
                 rows={5}
-                required
-                className="w-full px-4 py-3 bg-green-900 border border-lime-400/30 rounded-md focus:ring-2 focus:ring-lime-400 focus:border-transparent text-white"
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? "message-error" : undefined}
+                className={fieldClass(!!errors.message)}
+                {...register("message")}
               ></textarea>
+              <FieldError id="message-error" message={errors.message?.message} />
             </div>
 
             <button
