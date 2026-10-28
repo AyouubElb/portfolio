@@ -17,15 +17,28 @@ import {
   Boxes,
   Bot,
   BrainCircuit,
-  Terminal,
   Webhook,
   Puzzle,
-  Workflow,
   Zap,
   Sparkles,
-  Gauge,
   Atom,
   Blocks,
+  LayoutTemplate,
+  RefreshCw,
+  ShieldCheck,
+  ListChecks,
+  HardDrive,
+  Leaf,
+  MessageSquare,
+  Container,
+  FlaskConical,
+  Bug,
+  CreditCard,
+  PlayCircle,
+  Triangle,
+  Network,
+  Hexagon,
+  Gem,
 } from "lucide-react"
 import type { JSX } from "react/jsx-runtime"
 
@@ -48,7 +61,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>(
           return <Server className="w-5 h-5" />
         case "Databases":
           return <Database className="w-5 h-5" />
-        case "AI/ML":
+        case "AI":
           return <BrainCircuit className="w-5 h-5" />
         case "Tools":
           return <Wrench className="w-5 h-5" />
@@ -70,36 +83,43 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>(
         "Next.js": <Zap className="w-6 h-6" />,
         React: <Atom className="w-6 h-6" />,
         "Tailwind CSS": <Palette className="w-6 h-6" />,
-        "React Query": <Workflow className="w-6 h-6" />,
+        "shadcn/ui": <LayoutTemplate className="w-6 h-6" />,
+        "TanStack Query": <RefreshCw className="w-6 h-6" />,
         Zustand: <Boxes className="w-6 h-6" />,
         "React Hook Form": <Puzzle className="w-6 h-6" />,
-        GSAP: <Sparkles className="w-6 h-6" />,
 
         // Backend
         "Node.js": <Webhook className="w-6 h-6" />,
-        "Express.js": <Server className="w-6 h-6" />,
-        "REST API Design": <Puzzle className="w-6 h-6" />,
-        "JWT Auth": <Layers className="w-6 h-6" />,
-        BullMQ: <Workflow className="w-6 h-6" />,
+        Express: <Server className="w-6 h-6" />,
+        NestJS: <Hexagon className="w-6 h-6" />,
+        "REST APIs": <Network className="w-6 h-6" />,
+        "JWT & RBAC": <ShieldCheck className="w-6 h-6" />,
+        BullMQ: <ListChecks className="w-6 h-6" />,
         Zod: <FileJson className="w-6 h-6" />,
 
         // Databases
         PostgreSQL: <Database className="w-6 h-6" />,
         Prisma: <Layers className="w-6 h-6" />,
-        MongoDB: <Boxes className="w-6 h-6" />,
-        MySQL: <Database className="w-6 h-6" />,
-        Supabase: <Globe className="w-6 h-6" />,
+        Supabase: <Zap className="w-6 h-6" />,
+        Redis: <HardDrive className="w-6 h-6" />,
+        MongoDB: <Leaf className="w-6 h-6" />,
 
-        // AI/ML
-        "LLM Evaluation": <BrainCircuit className="w-6 h-6" />,
+        // AI
+        "OpenAI API": <Sparkles className="w-6 h-6" />,
+        "Claude API": <MessageSquare className="w-6 h-6" />,
+        "Gemini API": <Gem className="w-6 h-6" />,
+        "Vercel AI SDK": <Triangle className="w-6 h-6" />,
         "Prompt Engineering": <Bot className="w-6 h-6" />,
-        "Gemini/OpenAI APIs": <Sparkles className="w-6 h-6" />,
+        "LLM Evaluation": <BrainCircuit className="w-6 h-6" />,
 
         // Tools
         Git: <GitBranch className="w-6 h-6" />,
+        "GitHub Actions": <PlayCircle className="w-6 h-6" />,
         Vercel: <Globe className="w-6 h-6" />,
-        "CI/CD": <Workflow className="w-6 h-6" />,
-        Agile: <Gauge className="w-6 h-6" />,
+        Docker: <Container className="w-6 h-6" />,
+        Vitest: <FlaskConical className="w-6 h-6" />,
+        Sentry: <Bug className="w-6 h-6" />,
+        Stripe: <CreditCard className="w-6 h-6" />,
       }
 
       return iconMap[skillName] || <Sparkles className="w-6 h-6" />
