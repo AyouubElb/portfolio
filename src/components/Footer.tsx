@@ -7,7 +7,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold text-lime-400 code-font">
               <span className="text-white">&lt;</span>Ayoub.ELBouasri<span className="text-white">/&gt;</span>
             </h2>
-            <p className="text-gray-400">Full Stack Web Developer</p>
+            <p className="text-gray-400">Full-Stack Software Engineer</p>
           </div>
 
           <div className="flex space-x-6">
@@ -47,7 +47,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-lime-400/20 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Ayoub EL Bouasri. All rights reserved.</p>
           <p className="mt-2 code-font text-xs">
-            Designed & Built with <span className="text-lime-400">❤</span>
+            Designed & Built with <span className="text-lime-400">precision</span>
           </p>
         </div>
       </div>

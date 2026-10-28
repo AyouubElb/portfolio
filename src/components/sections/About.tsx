@@ -29,15 +29,16 @@ const About = forwardRef<HTMLDivElement, AboutProps>(({ profileImage }, ref) => 
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Hello, I'm <span className="text-lime-400">Ayoub EL Bouasri</span>
             </h1>
-            <h2 className="text-2xl text-gray-300 mb-8">Full Stack TypeScript Engineer</h2>
+            <h2 className="text-2xl text-gray-300 mb-8">Full-Stack Software Engineer</h2>
             <p className="text-lg mb-6 text-gray-300 leading-relaxed">
-              Full-stack developer building production web apps end-to-end. Currently developing a healthcare SaaS
-              platform at MedicallyPlus, after evaluating AI-generated code for Scale AI. Specialized in TypeScript
-              across the stack: Next.js, Express, PostgreSQL, and modern React patterns.
+              I take web applications from first idea to production: turning requirements into a clear design,
+              modelling the database, building the API and the interface, testing, and deploying. I work in
+              TypeScript across the whole stack with React, Next.js, Node.js, Express and PostgreSQL.
             </p>
             <p className="text-lg mb-10 text-gray-300 leading-relaxed">
-              Experienced in REST API design, role-based access control, queue systems (BullMQ), and database
-              design with Prisma ORM. Background in AI/LLM evaluation and prompt engineering.
+              I also build AI features into real products with the OpenAI, Claude and Gemini APIs. Comfortable with
+              REST API design, authentication and role-based access, background job queues, Prisma, Supabase and
+              continuous deployment on Vercel.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 text-gray-300">
               <div className="flex items-center">
