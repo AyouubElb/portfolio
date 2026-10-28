@@ -12,14 +12,18 @@ import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import Notification from "@/components/Notification";
-import { Check } from "lucide-react";
+import { Check, AlertCircle } from "lucide-react";
 import { experiences, education, skills } from "@/data/resume-data";
 import { projects } from "@/data/projects-data";
+import { sendContactMessage } from "@/actions/contact";
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [formStatus, setFormStatus] = useState<string | null>(null);
+  const [formStatus, setFormStatus] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [journeyProgress, setJourneyProgress] = useState(0);
@@ -99,16 +103,37 @@ export default function Portfolio() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormStatus("Message sent! I'll get back to you soon.");
+    let result: Awaited<ReturnType<typeof sendContactMessage>>;
+    try {
+      result = await sendContactMessage(
+        Object.fromEntries(new FormData(form))
+      );
+    } catch {
+      result = {
+        ok: false,
+        error:
+          "Your message could not be sent. Please email me directly at ayoub.elbouuasri@gmail.com.",
+      };
+    }
+    setIsSubmitting(false);
+
+    if (result.ok) {
+      setFormStatus({
+        type: "success",
+        text: "Message sent! I'll get back to you soon.",
+      });
+      form.reset();
       setTimeout(() => setFormStatus(null), 5000);
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+    } else {
+      // Keep what the visitor typed so they can retry or copy it
+      setFormStatus({ type: "error", text: result.error });
+      setTimeout(() => setFormStatus(null), 10000);
+    }
   };
 
   return (
@@ -120,9 +145,13 @@ export default function Portfolio() {
       }}
     >
       {formStatus && (
-        <Notification>
-          <Check size={20} className="mr-2 text-lime-400 flex-shrink-0" />
-          <span>{formStatus}</span>
+        <Notification variant={formStatus.type}>
+          {formStatus.type === "success" ? (
+            <Check size={20} className="mr-2 text-lime-400 flex-shrink-0" />
+          ) : (
+            <AlertCircle size={20} className="mr-2 text-red-300 flex-shrink-0" />
+          )}
+          <span>{formStatus.text}</span>
         </Notification>
       )}
 

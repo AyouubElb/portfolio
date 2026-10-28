@@ -51,6 +51,16 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>(({ handleSubmit, isSubm
 
         <div className="bg-green-950 p-5 sm:p-8 rounded-lg shadow-xl border border-lime-400/20">
           <form onSubmit={handleSubmit}>
+            <div style={{ display: "none" }} aria-hidden="true">
+              <input
+                type="text"
+                name="hp_field"
+                tabIndex={-1}
+                autoComplete="off"
+                data-1p-ignore
+                data-lpignore="true"
+              />
+            </div>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
