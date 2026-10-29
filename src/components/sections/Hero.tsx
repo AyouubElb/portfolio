@@ -87,7 +87,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
             I'm <span className="text-lime-400">Ayoub EL Bouasri</span>
             <br />
             <span className="typing-effect inline-block mt-4">
-              Full-Stack Software Engineer
+              Full-Stack Developer
             </span>
           </h1>
           <p className="text-base md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-shadow-sm">

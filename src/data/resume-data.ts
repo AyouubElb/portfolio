@@ -2,7 +2,7 @@ import type { Experience, Education, SkillGroup } from "@/types"
 
 export const experiences: Experience[] = [
   {
-    title: "Full-Stack Software Engineer",
+    title: "Full-Stack Developer",
     company: "MedicallyPlus",
     logo: "https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     period: "08/2025 to Present",

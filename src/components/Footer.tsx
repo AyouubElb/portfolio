@@ -7,7 +7,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold text-lime-400 code-font">
               <span className="text-white">&lt;</span>Ayoub.ELBouasri<span className="text-white">/&gt;</span>
             </h2>
-            <p className="text-gray-400">Full-Stack Software Engineer</p>
+            <p className="text-gray-400">Full-Stack Developer</p>
           </div>
 
           <div className="flex space-x-6">

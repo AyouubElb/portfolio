@@ -29,7 +29,7 @@ const About = forwardRef<HTMLDivElement, AboutProps>(({ profileImage }, ref) => 
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Hello, I'm <span className="text-lime-400">Ayoub EL Bouasri</span>
             </h1>
-            <h2 className="text-2xl text-gray-300 mb-8">Full-Stack Software Engineer</h2>
+            <h2 className="text-2xl text-gray-300 mb-8">Full-Stack Developer</h2>
             <p className="text-lg mb-6 text-gray-300 leading-relaxed">
               I take web applications from first idea to production: turning requirements into a clear design,
               modelling the database, building the API and the interface, testing, and deploying. I work in
